@@ -1,0 +1,7 @@
+<p>pacientes works!</p>
+<button (click)="guardar()">Actualizar</button>
+<ul>
+    <li *ngFor="let paciente of pacientes | async">
+        {{paciente.perNombre}}- {{paciente.perApellido}}
+    </li>
+</ul>
