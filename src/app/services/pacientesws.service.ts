@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CitaWs } from '../domain/citaws';
 import { PacienteWs } from '../domain/pacientews';
 
 @Injectable({
