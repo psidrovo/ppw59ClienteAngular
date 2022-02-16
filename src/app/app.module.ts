@@ -6,12 +6,13 @@ import { AppComponent } from "./app.component";
 
 import { HttpClientModule } from "@angular/common/http";
 
-import { PacientesComponent } from './pages/pacientes/pacientes.component'; 
+import { PacientesComponent } from './pages/pacientes/pacientes.component';
+import { HistorialCComponent } from './pages/historial-c/historial-c.component'; 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    PacientesComponent
+    PacientesComponent, HistorialCComponent
   ],
   imports: [
     BrowserModule, 
