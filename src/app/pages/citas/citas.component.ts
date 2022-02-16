@@ -41,4 +41,8 @@ export class CitasComponent implements OnInit {
     this.citaService.deleteCitas(this.cita);
   }
 
+  enviarCorreo(){
+    this.citaService.enviarCorreo(this.id);
+  }
+
 }

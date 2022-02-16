@@ -7,6 +7,8 @@ import { CitaWs } from '../domain/citaws';
 })
 export class CitaswsService {
 
+
+
   constructor(private http:HttpClient) { }
 
   findAllCitas(){
@@ -19,9 +21,9 @@ export class CitaswsService {
     return this.http.post<any>(url,cita);
   }
 
-  readCitas(cita:CitaWs){
+  readCitas(id:any){
     let url = "http://localhost:8080/ppw_final/ws/servicios/readCita?id={int}";
-    return this.http.post<any>(url,cita);
+    return this.http.post<any>(url,id);
   }
   updateCitas(cita:CitaWs){
     let url = "http://localhost:8080/ppw_final/ws/servicios/guardarCita";
@@ -31,5 +33,10 @@ export class CitaswsService {
   deleteCitas(cita:CitaWs){
     let url = "http://localhost:8080/ppw_final/ws/servicios/deleteCita?id={int}";
     return this.http.post<any>(url,cita);
+  }
+
+  enviarCorreo(id:any){
+    let url = "http://localhost:8080/ppw_final/ws/servicios/correoCita?id={int}"
+    return this.http.post<any>(url,id);
   }
 }
