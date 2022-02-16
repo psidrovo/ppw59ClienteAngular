@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CitaWs } from "src/app/domain/citaws";
+import { CitaswsService } from 'src/app/services/citasws.service';
 import { PacienteswsService } from 'src/app/services/pacientesws.service';
 
 @Component({
@@ -15,29 +16,29 @@ export class CitasComponent implements OnInit {
 
   id: any;
 
-  constructor(private pacienteservice : PacienteswsService) { }
+  constructor(private citaService : CitaswsService) { }
 
   ngOnInit(): void {
   }
 
   guardar(){
-    this.pacienteservice.saveCita(this.cita);
+    this.citaService.createCitas(this.cita);
   }
 
   finall(){
-    this.ListCitas = this.pacienteservice.findAllCitas();
+    this.ListCitas = this.citaService.findAllCitas();
   }
 
   modify(){
-    this.pacienteservice.updateCita(this.cita);
+    this.citaService.updateCitas(this.cita);
   }
 
   read(){
-    this.pacienteservice.readCita(this.id);
+    this.citaService.readCitas(this.id);
   }
 
   delete(){
-    this.pacienteservice.deleteCita(this.cita);
+    this.citaService.deleteCitas(this.cita);
   }
 
 }
