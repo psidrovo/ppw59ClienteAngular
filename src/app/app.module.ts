@@ -6,13 +6,12 @@ import { AppComponent } from "./app.component";
 
 import { HttpClientModule } from "@angular/common/http";
 
-import { PacientesComponent } from './pages/pacientes/pacientes.component';
-import { CitasComponent } from './pages/citas/citas.component'; 
+import { PacientesComponent } from './pages/pacientes/pacientes.component'; 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    PacientesComponent, CitasComponent
+    PacientesComponent
   ],
   imports: [
     BrowserModule, 
